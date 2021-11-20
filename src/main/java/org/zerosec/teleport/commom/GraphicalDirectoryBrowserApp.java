@@ -1,4 +1,4 @@
-package org.zerosec.teleport;
+package org.zerosec.teleport.commom;
 
 import com.google.common.util.concurrent.RateLimiter;
 import javafx.application.Application;
@@ -56,6 +56,7 @@ public class GraphicalDirectoryBrowserApp extends Application {
         try {
             Files.walk(dir, 1)
                     .filter(Files::isDirectory)
+                    .filter(path -> !path.equals(dir))
                     .forEach(contentDir -> {
                         DirectoryView view = new DirectoryView(
                                 contentDir.getFileName().toString(),

@@ -1,4 +1,4 @@
-package org.zerosec.teleport;
+package org.zerosec.teleport.commom;
 
 import javafx.application.Application;
 import javafx.scene.Parent;
